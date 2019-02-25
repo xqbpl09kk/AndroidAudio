@@ -6,19 +6,22 @@ import android.media.MediaRecorder
 
 object AudioRecordApp {
 
-    var audioRecorder : AudioRecord ?= null
+    var audioRecorder: AudioRecord? = null
 
-    fun initAudioRecord(){
+    fun initAudioRecord() {
+        val bufferSizeBytes = AudioRecord.getMinBufferSize(44100
+                , AudioFormat.CHANNEL_IN_MONO
+                , AudioFormat.ENCODING_PCM_16BIT)
         audioRecorder = AudioRecord(
                 MediaRecorder.AudioSource.DEFAULT
-                        ,44000
-                    ,AudioFormat.CHANNEL_IN_MONO
-        ,AudioFormat.ENCODING_PCM_16BIT
-        , 8 * 1024
+                , 44000
+                , AudioFormat.CHANNEL_IN_MONO
+                , AudioFormat.ENCODING_PCM_16BIT
+                , bufferSizeBytes
         )
     }
 
-    fun startRecord(){
-        audioRecorder?.startRecording()
+    fun startRecord() {
+        audioRecorder
     }
 }
