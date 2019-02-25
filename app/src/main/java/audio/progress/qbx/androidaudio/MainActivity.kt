@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                     context.startActivity(Intent(context , ImageViewActivity::class.java))
                 }
                 1 -> {
-
+//                    context.startActivity(Intent(context , ))
                 }
             }
         }
