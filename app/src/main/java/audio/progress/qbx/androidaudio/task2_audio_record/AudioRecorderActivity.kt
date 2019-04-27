@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import audio.progress.qbx.androidaudio.R
 import kotlinx.android.synthetic.main.activity_audio_recoder.*
 
-class AudioRecoderActivity :AppCompatActivity(){
+class AudioRecorderActivity :AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

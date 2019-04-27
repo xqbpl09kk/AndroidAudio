@@ -4,9 +4,11 @@
     package="audio.progress.qbx.androidaudio">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
+        android:name=".MApp"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -21,6 +23,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".task_1_draw_image.ImageViewActivity"/>
+        <receiver android:name=".NetWorkMonitor">
+            <intent-filter>
+
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
