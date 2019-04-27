@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".task_1_draw_image.ImageViewActivity"/>
+
         <receiver android:name=".NetWorkMonitor">
             <intent-filter>
 
@@ -30,6 +31,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".task2_audio_record.AudioRecoderActivity"/>
+
 
     </application>
 

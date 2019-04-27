@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import audio.progress.qbx.androidaudio.task2_audio_record.AudioRecoderActivity
 import audio.progress.qbx.androidaudio.task_1_draw_image.ImageViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     context.startActivity(Intent(context , ImageViewActivity::class.java))
                 }
                 1 -> {
-
+                    context.startActivity(Intent(context , AudioRecoderActivity::class.java))
                 }
             }
         }
